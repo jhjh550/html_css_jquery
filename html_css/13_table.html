@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table{
+			border:1px solid black;	
+			caption-side: bottom;
+			border-collapse: collapse;
+		}
+		td,th{
+			text-align: center;
+			border:1px dotted gray;
+		}
+		th{
+			background-color: lightgray;
+		}
+		caption{
+			font-size: 10px;
+		}
+		.city{
+			background-color: DarkOrange;
+		}
+		table table th{
+			background-color: white;
+		}
+	</style>
+</head>
+<body>
+<table>
+	<caption>city's temperature</caption>
+	<tr>
+		<th>city</th>
+		<th>temp</th>
+		<th>temp2</th>
+		<th>date</th>
+	</tr>
+	<tr>
+		<td class="city">seoul</td>
+		<td colspan="2">
+			<table>
+				<tr>
+					<th>1</th>
+					<th>2</th>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>4</td>
+				</tr>
+			</table>
+		</td>
+		<td rowspan="3">0731</td>
+	</tr>
+	<tr>
+		<td class="city">daegu</td>
+		<td>31'c</td>
+		<td>29'c</td>
+		
+	</tr>
+	<tr>
+		<td class="city">busan</td>
+		<td>31'c</td>
+		<td>29'c</td>
+		
+	</tr>
+</table>
+</body>
+</html>
