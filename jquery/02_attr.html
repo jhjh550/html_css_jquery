@@ -4,17 +4,13 @@
 	<title></title>
 </head>
 <body>
-<ul>
-	<li>hello</li>
-	<li>world</li>
-	<li>oracle</li>
-	<li>java</li>
-</ul>
+<a href="http://www.naver.com" id="hello">naver</a>
+
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('li').css('color','red')
+		$('#hello').attr('href', 'http://www.daum.net')
 	})
 </script>
 
