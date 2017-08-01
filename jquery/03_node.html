@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div class="target">
+	hello world 1
+</div>
+<div class="target">
+	hello world 2
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.target').before('<div>before</div>')
+		$('.target').after('<div>after</div>')
+		$('.target').prepend('<div>prepend</div>')
+		$('.target').append('<div>append</div>')
+	})
+</script>
+
+</body>
+</html>

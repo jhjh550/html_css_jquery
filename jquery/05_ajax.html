@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p>time : <span id="time"></span></p>
+
+<input type='button' id='getTime' value='getTime'>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#getTime').click(function(){
+		$.ajax({
+			url:'test.php'
+		}).done(function(data){
+			$('#time').append(data)
+		})
+	})
+})
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div class='target' id='target1'> target 1 </div>
+
+<div class='target' id='target2'> target 2 </div>
+
+<input type='button' value='remove 1' id='btn1'>
+
+<input type='button' value='replace 2' id='btn2'>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		$('#btn1').click(function(){
+			$('#target1').remove()
+			//$('#target1').empty()
+		})
+
+		$('#btn2').click(function(){
+			$('#target2').replaceWith('<div>replace</div>')
+		})
+
+
+
+	})
+</script>
+</body>
+</html>
