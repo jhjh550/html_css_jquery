@@ -22,6 +22,8 @@
 	<li>Tea</li>
 </ul>
 
+<a href='http://www.naver.com'>naver</a>
+<a href='http://www.daum.net' target="_blank">daum</a>
 
 
 <input type='button' id='myButton' value='button' >
@@ -33,7 +35,14 @@
 			//$('*').hide()
 			//$(this).hide()
 			//$('p.intro').hide()
-			$('p:first').hide()
+			//$('p:first').hide()
+			//$('ul li:first').hide()
+			//$('ul li:first-child').hide()
+			//$('[href]').hide()
+			//$("a[target='_blank']").hide()
+			$("a[target!='_blank']").hide()
+			//$('tr:even').css('backgound-color','yellow')
+			//$('tr:odd').css('backgound-color','white')
 		})
 	})
 </script>
