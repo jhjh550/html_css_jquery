@@ -3,43 +3,53 @@
 <head>
 	<title></title>
 	<style type="text/css">
-		#main{
-			margin-left: 220px;
+		body{
+			margin:0px;
 		}
 		ul{
-			position: absolute;
-			width: 200px;
+			position: fixed;
+			bottom: 0px;
+			width: 100%;
 			margin: 0px;
 			padding: 0px;
 			list-style-type: none;
-			border: 1px solid black;
+			background-color: lightgray;
+			overflow: hidden;
 		}
 		li{
-			text-align: center;
-			border-bottom: 1px solid black
+			float:left;	
+			border-right: 1px solid black;		
 		}
 		li:last-child{
-			border-bottom: none;
+			border-right: none;
 		}
 		li a{
-			display: block;
-			background-color: lightgray;
-			text-decoration: none;
-
-		}
-		li a:hover{
 			color: white;
+			padding: 8px;
+			display: block;
+			text-decoration: none;
+		}
+		li a:hover:not(.active){
 			background-color: gray;
+		}
+		.active{
+			background-color: green;
+		}
+		#main{
+			padding: 20px;
+			
 		}
 	</style>
 </head>
 <body>
+
 <ul>
-	<li><a href="#">Home</a></li>
+	<li><a href="#" class='active'>Home</a></li>
 	<li><a href="#">News</a></li>
 	<li><a href="#">Contact</a></li>
-	<li><a href="#">About</a></li>
+	<li style="float:right"><a href="#">About</a></li>
 </ul>
+
 
 <div id="main">
 	<h2>오라클 자바 교육센터 </h2>
@@ -54,5 +64,7 @@ S/W 개발회사가 설립하여 운영하는 현장과 교육이 하나가 되�
 <p>학원,학교,현장이 삼위일체가 되도록 본원은 별도의 S/W 개발회사를 운영중이므로 여타 학원과 달리 교육을 현장에서 쉽게 접목시킬 수 있는 시스템을 가지고 있어 미취업자 여러분에게 많은 도움을 드릴 수 있을 것 입니다. 주저하지 마시고 내방하여 상담받으신 후 새로운 미래에 도전하시기 바랍니다.
 </p>
 </div>
+
+
 </body>
 </html>
