@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p>hello world</p>
+Name : <input type='text'><br>
+Email : <input type='text'>
+
+<style type="text/css">
+	.blue{
+		background-color: blue;
+	}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('input').focus(function(){
+			$(this).css('background-color', 'gray')
+		})
+
+		$('input').blur(function(){
+			$(this).css('background-color', 'white')
+		})
+
+		// $('p').dblclick(function(){
+		// 	$(this).hide()
+		// })
+		// $('p').mouseenter(function(){
+		//  	// alert('you entered p element')
+		//  	$(this).addClass('blue')
+		//  })
+		// $('p').mouseleave(function(){
+		// 	// alert('you leave p element')
+		// 	$(this).removeClass('blue')
+		// })
+		// mousedown, mouseup
+		// $('p').hover(function(){
+		// 	$(this).addClass('blue')
+		// }, function(){
+		// 	$(this).removeClass('blue')
+		// })
+		$('p').on({
+			mouseenter:function(){
+				$(this).addClass('blue')
+			},
+			mouseleave:function(){
+				$(this).removeClass('blue')
+			},
+			click:function(){
+				$(this).css('background-color','yellow')
+			}
+		})
+
+	})
+</script>
+</body>
+</html>
