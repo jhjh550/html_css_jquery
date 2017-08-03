@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p id='time'></p>
+
+<img class='slide' src='img/avatar.png'>
+<img class='slide' src='img/head-bg.jpg'>
+<img class='slide' src='img/post-img.jpg'>
+
+
+<script type="text/javascript">
+	// window.setTimeout(function(){
+	// 	alert('hello world')
+	// }, 5000)
+	function showImg(index){
+		var slides = document.getElementsByClassName('slide')
+		for(var i=0; i<slides.length; i++){
+			slides[i].style.display = 'none'
+		}
+		slides[index].style.display = 'block'
+	}
+	
+
+	var myValue = document.getElementById('time')
+	var test = 0
+	window.setInterval(function(){
+		var myDate = new Date()
+		console.log(myDate)
+		myValue.innerHTML = myDate
+		showImg(test)
+		test = test + 1
+		if(test>2)
+			test = 0
+		
+	}, 1000)
+</script>
+
+</body>
+</html>
