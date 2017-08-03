@@ -2,8 +2,40 @@
 <html>
 <head>
 	<title></title>
+	<style type="text/css">
+		ul{
+			width: 200px;
+			list-style-type: none;			
+		}
+		li a{
+			color:white;
+			text-decoration: none;
+			display: block;
+			background-color: lightgray; 
+		}
+	</style>
 </head>
 <body>
+<ul>
+	<li><a href="#">hello</a></li>
+	<li><a href="#">world</a></li>
+	<li><a href="#">oracle</a></li>
+	<li><a href="#">java</a></li>
+</ul>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('li').hover(function(){
+			$(this).stop()
+			$(this).animate({paddingLeft:'50px'},500,'easeOutCirc')
+		}, function(){
+			$(this).stop()
+			$(this).animate({paddingLeft:'0px'},500,'easeOutBounce')
+		})		
+	})
+</script>
 
 </body>
 </html>
