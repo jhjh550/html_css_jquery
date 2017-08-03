@@ -48,10 +48,8 @@ S/W 개발회사가 설립하여 운영하는 현장과 교육이 하나가 되�
 	$(function(){
 		$('#accordian div').hide()
 		$('#accordian h2').click(function(){
-
-
-
-
+			$(this).next().slideDown()
+			$(this).next().siblings('div').slideUp()
 		})
 	})
 </script>
