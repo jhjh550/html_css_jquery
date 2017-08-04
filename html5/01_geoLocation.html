@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div id='location'> </div>
+
+<script type="text/javascript">
+	window.onload = getMyLocation
+
+	function getMyLocation(){
+		if(navigator.geolocation){
+			navigator.geolocation.getCurrentPosition(displayLocation)
+		}else{
+			alert('no geolocation support')
+		}
+	}
+	function displayLocation(position){
+		var lat = position.coords.latitude
+		var lng = position.coords.longitude
+
+		var div = document.getElementById('location')
+		div.innerHTML = "lat:"+lat+" lng:"+lng 
+
+	}
+
+</script>
+</body>
+</html>
