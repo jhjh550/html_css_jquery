@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#myCanvas{
+			width: 600px;
+			height: 200px;
+			border: 1px solid black
+		}
+	</style>
+</head>
+<body>
+<canvas id='myCanvas'></canvas>
+<script type="text/javascript">
+	window.onload = function(){
+		var canvas = document.getElementById('myCanvas')
+		var context = canvas.getContext('2d')
+		// context.fillRect(10,10,100,100)
+
+		context.beginPath()
+		context.moveTo(100,150)
+		context.lineTo(250,75)
+		context.lineTo(125,30)
+		context.closePath()
+		context.lineWith=5
+		context.stroke()
+		context.fillStyle='red'
+		context.fill()
+	}
+</script>
+</body>
+</html>
